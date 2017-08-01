@@ -4,9 +4,7 @@ Using React create an interface where a user can type a company name which retur
 
 When there are more than 10 results we expect to see a “show more” button which will reveal the next 10 item when clicked.
 
-
-
-Look at example json file.
+Look at company.json
 
 The aim of this exercise is to demonstrate your React knowledge, therefore please do not use any additional libraries i.e. react-autosuggest, react.autocomplete etc.
 
