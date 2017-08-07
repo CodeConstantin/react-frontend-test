@@ -1,10 +1,10 @@
-# React Frontend test
+# React Front End test
 
 ## Aim
 
 Using React create an interface where a user can type a company name which returns a filtered list of results, in groups of 10.
 
-## Acceptance Criteria
+## Acceptance criteria
 
 - Create an input box where a user can enter the name of a company
 - After the input of the 3rd character, render a filtered list of results which match the characters in the user input (there is an example json file with a sample set of results for you to work with)
