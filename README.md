@@ -13,7 +13,7 @@ Using React create an interface where a user can type a company name which retur
 - The rendered list will display results and associated metadata, as per wireframe
 - If there are more than 10 matching items, render a “show more” button – when this button is clicked, the next 10 items should be revealed
 
-### What we're looking for
+## What we're looking for
 
 - Clean, maintainable, code backed by tests (using a library of your choice)
 - A README file describing how to run the code and tests
