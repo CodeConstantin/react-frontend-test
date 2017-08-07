@@ -20,8 +20,7 @@ We expect you to be able to demo your work, so please ensure that your code can 
 
 ### What we're looking for
 
-- Clean, maintainable code
-- Backed by tests using a library of your choice
+- Clean, maintainable, code backed by tests (using a library of your choice)
 - A README file describing how to run the code and tests
 - Git commits at regular intervals, demonstrating iterative development
 - Pragmatism - i.e. no over-engineering
