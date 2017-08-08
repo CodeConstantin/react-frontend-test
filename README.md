@@ -14,7 +14,7 @@ Using React create an interface where a user can type a company name which retur
 - When there are 2 characters or less in the search box, no results will be displayed
 - Create a clear button which, when clicked, will clear the user input
 - The rendered list will display results and associated metadata, as per wireframe
-- If there are more than 10 matching items, render a “show more” button – when this button is clicked, the next 10 items should be revealed
+- If there are more than 5 matching items, render a “show more” button – when this button is clicked, the next 5 items should be revealed
 
 ## What we're looking for
 
