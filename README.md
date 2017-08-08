@@ -4,7 +4,7 @@
 
 Using React create an interface where a user can type a company name which returns a filtered list of results, in groups of 10.
 
-![A wireframe of the Company search component](https://raw.githubusercontent.com/Mergermarket-Careers/react-frontend-test/master/company-search-wireframe.png)
+![A wireframe of the Company search component](https://github.com/Mergermarket-Careers/react-frontend-test/blob/master/company-search-wireframe.jpg)
 
 ## Acceptance criteria
 
