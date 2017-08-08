@@ -11,7 +11,7 @@ Using React create an interface where a user can type a company name which retur
 - Create an input box where a user can enter the name of a company
 - After the input of the 3rd character, render a filtered list of results which match the characters in the user input (there is an example json file with a sample set of results for you to work with)
 - When the user removes the text from the search box, no results will be displayed
-- When there are 2 characters or less, no results will be displayed
+- When there are 2 characters or less in the search box, no results will be displayed
 - Create a clear button which, when clicked, will clear the user input
 - The rendered list will display results and associated metadata, as per wireframe
 - If there are more than 10 matching items, render a “show more” button – when this button is clicked, the next 10 items should be revealed
