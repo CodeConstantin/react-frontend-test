@@ -1,10 +1,10 @@
 # React Front End test
 
-## Aim
+## Component summary
 
-Using React create an interface where a user can type a company name which returns a filtered list of results, in groups of 5.
+A React component where a user can type a company name which returns a filtered list of results, in groups of 5.
 
-![A wireframe of the Company search component](https://github.com/Mergermarket-Careers/react-frontend-test/blob/master/search-wireframe.jpg)
+![A wireframe of the Company search component](content/search-wireframe.jpg)
 
 ## Acceptance criteria
 
@@ -16,13 +16,31 @@ Using React create an interface where a user can type a company name which retur
 - The rendered list will display results and associated metadata, as per wireframe
 - If there are more than 5 matching items, render a “show more” button – when this button is clicked, the next 5 items should be revealed
 
-## What we're looking for
-- A repository that we can clone from GitHub
-- Clean, maintainable, code backed by tests (using a library of your choice)
-- A README file describing how to run the code and tests
-- Git commits at regular intervals, demonstrating iterative development
+## Dev
+Pre-requisites: Node 6
+```
+npm run dev
+```
+Example will be served to localhost:8080
+
+## Running tests
+```
+npm run test
+```
+or
+```
+npm run watchTests
+```
+
+
+## Instructions for developers
+This component is partway through development. The "Show more" button, it's functionality and the accompanying unit tests need to be added.
+Additionally, the search field needs to be restyled using the search and close icons. The SVGs for these icons are provided in the Content folder.
+
+### What we're looking for
+- Clean, maintainable, code backed by tests
 - Pragmatism - i.e. no over-engineering
 
-## Please note
+### Please note
 - The aim of this exercise is to test your React knowledge, therefore we do not expect you to use libraries for component functionality, i.e. react-autosuggest or react.autocomplete.
 - We expect you to be able to demo your work, so please ensure that your code can be rendered in a browser.
