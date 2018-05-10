@@ -24,7 +24,6 @@
     "chai": "^3.5.0",
     "css-loader": "^0.28.4",
     "enzyme": "^2.8.2",
-    "frontend-toolkit": "^9.1.0",
     "jsdom": "^9.8.0",
     "json-loader": "^0.5.4",
     "jsonfile": "^3.0.0",
