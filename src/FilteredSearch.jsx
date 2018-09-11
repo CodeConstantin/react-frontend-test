@@ -9,10 +9,13 @@ class FilteredSearch extends React.Component {
     super(props)
     this.state = {
       searchTerm: '',
-      filterList: []
+      filterList: [],
+      filterListAllResults: 0,
+      searchLimit: 5
     };
     this.handleChange = this.handleChange.bind(this)
     this.clearButtonClicked = this.clearButtonClicked.bind(this)
+    this.showMore = this.showMore.bind(this)
   }
 
   handleChange(event) {
@@ -33,22 +36,39 @@ class FilteredSearch extends React.Component {
 
   clearFilterResults() {
     this.setState({
-      filterList: []
+      filterList: [],
+      filterListAllResults: 0,
+      searchLimit: 5
     })
   }
 
-  getFilterResults(str) {
+  showMore() {
+    const searchStr = this.state.searchTerm
+    const searchLimit = this.state.searchLimit + 5
+    this.getFilterResults(searchStr, searchLimit)
+    this.setState({searchLimit})
+  }
+
+  getFilterResults(str, limit = 5) {
     const filterList = data.filter(item => item.name.toLowerCase().includes(str.toLowerCase()))
-    this.setState({filterList})
+    const filterListAllResults = filterList.length
+    const limitFilterList = filterList.slice(0, limit)
+    this.setState({filterList: limitFilterList, filterListAllResults})
   }
 
   render() {
+    const buttonStyle = {
+      marginTop: '20px'
+    }
     return (
       <div>
         <SearchBox value={this.state.searchTerm} handleChange={this.handleChange} clearButtonClicked={this.clearButtonClicked} />
         <FilteredResults data={this.state.filterList} />
+        {this.state.filterListAllResults > 5 && this.state.filterListAllResults > this.state.searchLimit ? 
+          <button onClick={this.showMore} data-selector="showMore" style={buttonStyle}>Show More</button> : 
+          null}
       </div>
-    );
+    )
   }
 }
 
