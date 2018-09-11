@@ -43,7 +43,7 @@ describe('App', () => {
         component.instance().handleChange(event)
       })
       it('should filter the companies by search term', () => {
-          expect(component.state('filterList').length).to.be.equal(12)
+          expect(component.state('filterList').length).to.be.equal(5)
       })
     })
 
@@ -66,4 +66,40 @@ describe( 'Search box', () => {
     wrapper.find('[data-selector="searchfield"]').simulate('change', { target: { value: 'ibm' } })
     expect(wrapper.state('searchTerm')).to.be.equal('ibm')
   })
+})
+
+describe('Show More Button', () => {
+  it('it DOES NOT render when there is no search term', () => {
+    const wrapper = mount(<FilteredSearch />)
+    wrapper.find('[data-selector="searchfield"]').simulate('change', { target: { value: '' } })
+    expect(wrapper.find('[data-selector="showMore"]')).to.have.length(0)
+  })
+
+  it('it RENDERS when there are more than 5 search results', () => {
+    const wrapper = mount(<FilteredSearch />)
+    wrapper.find('[data-selector="searchfield"]').simulate('change', { target: { value: 'son' } })
+    expect(wrapper.find('[data-selector="showMore"]')).to.have.length(1)
+  })
+
+  it('it DOES NOT render if there are less than 5 search results', () => {
+    const wrapper = mount(<FilteredSearch />)
+    wrapper.find('[data-selector="searchfield"]').simulate('change', { target: { value: 'mob' } })
+    expect(wrapper.find('[data-selector="showMore"]')).to.have.length(0)
+  })
+
+  it('it increases by 5 the number of search results on click', () => {
+    const wrapper = mount(<FilteredSearch />)
+    wrapper.find('[data-selector="searchfield"]').simulate('change', { target: { value: 'son' } })
+    wrapper.find('[data-selector="showMore"]').simulate('click')
+    expect(wrapper.state('filterList')).to.have.length(10)
+  })
+
+  it('it DOES NOT render if all the results were shown on the page', () => {
+    const wrapper = mount(<FilteredSearch />)
+    wrapper.find('[data-selector="searchfield"]').simulate('change', { target: { value: 'son' } })
+    wrapper.find('[data-selector="showMore"]').simulate('click')
+    wrapper.find('[data-selector="showMore"]').simulate('click')
+    expect(wrapper.find('[data-selector="showMore"]')).to.have.length(0)
+  })
+
 })
